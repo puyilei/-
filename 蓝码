@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.335">
+    <title>浙江财经大学建康通行码</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #3d3f3e;
+            /* font-family:Arial,Helvetica,sans-serif; */
+        }
+        #time1 {
+            width: 500px;
+            height: 120px;
+            background-color:white;
+            position:absolute;
+            top: 190px;
+            left: 300px;
+            font-size: 100px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+        #time2 {
+            width: 550px;
+            height: 140px;
+            background-color:white;
+            position:absolute;
+            top: 320px;
+            left: 280px;
+            font-size: 130px;
+            text-align: center;
+            line-height: 140px;
+            font-weight: bold;
+
+        }
+        #name{
+            width: 140px;
+            height: 100px;
+            background-color:white;
+            position:absolute;
+            top: 445px;
+            left: 200px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div style='width:30%;height:700px;background-image: url(./微信图片_20211006101436.jpg);background-size: 100% 100%;'>
+
+    </div> -->
+    <img src="/微信图片_20211006101436.jpg" alt="">
+    <div id="time1">10月07日</div>
+    <div id="time2">23:53:54</div>
+    <div id="name">
+        戚功明
+    </div>
+    <script>
+        const updateTime = () => {
+            let Time = new Date();
+            document.getElementById('time1').innerHTML = (Time.getMonth() + 1) + '月' + (Time.getDate() < 10 ? '0' + Time.getDate() : Time.getDate()) + '日'
+            document.getElementById('time2').innerHTML = (Time.getHours() < 10 ? '0' + Time.getHours() : Time.getHours()) + ':'
+                                                        + (Time.getMinutes() < 10 ? '0' + Time.getMinutes() : Time.getMinutes()) + ':'
+                                                        + (Time.getSeconds() < 10 ? '0' + Time.getSeconds() : Time.getSeconds())
+        }
+        updateTime()
+        setInterval(() => {
+            updateTime()
+            // console.log(Time.getSeconds())
+        }, 1000)
+    </script>
+
+</body></html>
